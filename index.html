@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content="HTML Tidy for HTML5 for Mac OS X version 5.4.0">
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Bangkok Functional Programmers">
+  <title>Intro to Learning Scala</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">
+  code{white-space: pre;}
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme"><!-- For syntax highlighting using highlight.js -->
+  <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!-- Printing and PDF exports -->
+
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script><!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1 class="title">Intro to<br>
+        Learning Scala</h1>
+        <p class="author"><em>Bangkok Functional Programmers</em></p>
+        <p class="date"><em>May 17th, 2017</em></p>
+      </section>
+      <section id="yours-truly" class="slide level2" style="text-align: left;">
+        <h2>Yours Truly</h2>
+        <p><i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i> <a href="https://github.com/ches">ches</a></p>
+        <p><i class="fa fa-twitter fa-lg fa-fw" aria-hidden="true"></i> <a href="https://twitter.com/ches">ches</a></p>
+        <p><i class="fa fa-id-badge fa-lg fa-fw" aria-hidden="true"></i> <a href="http://chesmart.in">chesmart.in</a></p>
+        <p><i class="fa fa-meetup fa-lg fa-fw" aria-hidden="true"></i> <a href="https://www.meetup.com/bkkhack/">meetup.com/bkkhack</a></p>
+      </section>
+      <section>
+        <section id="why-scala" class="titleslide slide level1">
+          <h1>Why Scala?</h1>
+        </section>
+        <section id="multi-paradigm" class="slide level2">
+          <h2>Multi-Paradigm</h2>
+          <ul>
+            <li class="fragment">Your personal on-ramp to FP</li>
+            <li class="fragment">A Trojan Horse for FP into your company</li>
+          </ul>
+          <aside class="notes">
+            <p>"Scalable Language", OOP + functional, functions are objects!</p>
+            <p>This does bring a learning curve. But IMO Scala gets a bad rap as a "big" language, actually many "language features" are library features, not syntax. For example, Map <code>-&gt;</code> syntax.</p>
+            <p>FP as "programming in the small", modules and OOP "programming in the large"</p>
+          </aside>
+        </section>
+        <section id="long-live-the-jvm" class="slide level2">
+          <h2>Long Live the JVM</h2>
+          <ul>
+            <li>The JVM is pervasive, mature, and performant</li>
+            <li>Statically-typed benefits,<br>
+              dynamic language comforts
+              <ul>
+                <li>Type inference</li>
+                <li>REPL</li>
+                <li>Everything is an expression</li>
+              </ul>
+            </li>
+          </ul>
+          <aside class="notes">
+            <p>Say what you will about Java showing its age, but the JVM remains one of the top runtime platforms for good reasons, and continues to develop in support of new hosted languages.</p>
+            <p>Obviously widely deployed in enterprise, where it's well-understood by IT.</p>
+            <p>Java interop and useful libraries.</p>
+          </aside>
+        </section>
+        <section id="but" class="slide level2">
+          <h2>...But</h2>
+          <ul>
+            <li class="fragment">
+              <a href="https://www.scala-js.org/">Scala.js</a> is production-ready.
+            </li>
+            <li class="fragment">
+              <a href="http://scala-native.org/">Scala Native</a> (LLVM) is underway.
+            </li>
+            <li class="fragment">(Hooray for a defined <a href="https://www.scala-lang.org/files/archive/spec/2.12/">language specification</a>).
+            </li>
+          </ul>
+          <aside class="notes">
+            <p>RIP .NET CLR</p>
+            <ul>
+              <li>Interoperate with JS statically and dynamically</li>
+              <li>All your IDE features, many of your Scala libraries</li>
+              <li>Not just for the browser—think Node, React Native, AWS Lambda, etc.</li>
+              <li>Cool to see abstractions like Futures implemented on JS primitives.</li>
+            </ul>
+          </aside>
+        </section>
+        <section id="community" class="slide level2">
+          <h2>Community</h2>
+          <ul>
+            <li>Open Source</li>
+            <li>Industry</li>
+            <li>Academia</li>
+            <li>
+              <a href="https://scala.epfl.ch/">Scala Center</a>
+            </li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Language has a published specification and is open</li>
+              <li>Typesafe / Lightbend and commercial support ecosystem</li>
+              <li>EPFL, Scala Center, Typelevel community + scalac</li>
+            </ul>
+          </aside>
+        </section>
+        <section id="martin" class="slide level2">
+          <h2>❤️ Martin</h2>
+          <figure>
+            <img src="assets/martin.jpg" alt="Prof. Odersky man crush" style="width:60.0%">
+            <figcaption>
+              <em>Prof. Odersky man crush</em>
+            </figcaption>
+          </figure>
+          <aside class="notes">
+            <p>A language community is blessed to have someone with Martin's rare blend of brilliant creator + warmth and gifted passion for teaching.</p>
+            <p>Founder and chairman of Typesafe née Lightbend, professor at Ecole Polytechnique Fédérale de Lausanne (EPFL) in Switzerland.</p>
+            <p>Wrote javac compiler v2 released in 1999, still the basis of javac today, plus the precursor of Java 5 generics.</p>
+          </aside>
+        </section>
+        <section id="concurrency-streams" class="slide level2">
+          <h2>Concurrency & Streams</h2>
+          <ul>
+            <li>Modern abstractions built on JVM's<br>
+            proven primitives</li>
+            <li>Futures, parallel collections</li>
+            <li>Actors</li>
+            <li>Rx, Reactive Streams</li>
+            <li>Monix, FS2 née scalaz Streams, FRP</li>
+            <li>In the large: Spark</li>
+          </ul>
+          <aside class="notes">
+            <p>Akka (but don't be too easily seduced—Actors sacrifice type safety and functional benefits in a tradeoff that isn't worth it unless building a system with actual distributed state)</p>
+            <p>FRP - Functional Reactive Programming, see e.g. Elm language and one-way data flow like Redux (someone should give a meetup talk about either of these!)</p>
+          </aside>
+        </section>
+        <section id="progressive-research" class="slide level2">
+          <h2>Progressive Research</h2>
+          <ul>
+            <li>Alternative runtimes</li>
+            <li>Macros: compile-time metaprogramming</li>
+            <li>
+              <a href="http://www.scala-lang.org/blog/2016/02/03/essence-of-scala.html">DOT calculus</a>, dotty, Scala 3
+            </li>
+          </ul>
+          <aside class="notes">
+            <p>scala-logging is a very practical example for macros.</p>
+            <p>Yeah yeah Clojure devs, we're not homoiconic, but you're dynamically-typed :-P</p>
+          </aside>
+        </section>
+      </section>
+      <section>
+        <section id="the-gateway-drug" class="titleslide slide level1">
+          <h1>The Gateway Drug</h1>
+        </section>
+        <section id="lead-a-horse-to-water" class="slide level2">
+          <h2>Lead a Horse to Water</h2>
+          <ul>
+            <li>Scala makes immutable the default</li>
+            <li>There is no <code>null</code> (except for the sake of Java)</li>
+            <li>Everything is an expression, remember?</li>
+            <li>Algebraic Data Types (sit tight)</li>
+          </ul>
+          <aside class="notes">
+            <p><code>Option</code> type becoming more familiar: Swift, Rust, OCaml, Haskell's <code>Maybe</code></p>
+          </aside>
+        </section>
+        <section class="slide level2">
+          <figure>
+            <img src="assets/godfather-runtime.jpg" alt="Turing-complete type system‽">
+            <figcaption>
+              Turing-complete type system‽
+            </figcaption>
+          </figure>
+        </section>
+        <section class="slide level2">
+          <p>A rich, powerful type system enables you<br>
+          to design more error-proof APIs.</p>
+        </section>
+        <section id="algebraic-data-types" class="slide level2">
+          <h2>Algebraic Data Types</h2>
+        </section>
+        <section id="sum-types" class="slide level2">
+          <h2>Sum Types</h2>
+          <p>Elegant in Haskell:</p>
+          <pre class="haskell"><code>data Bool = False | True</code></pre>
+          <p>Noisier in Scala:</p>
+          <pre class="scala"><code>sealed trait Bool
+final case object False extends Bool
+final case object True extends Bool</code></pre>
+        </section>
+        <section id="product-types" class="slide level2">
+          <h2>Product Types</h2>
+          <p>The venerable <code>Tuple</code>:</p>
+          <pre class="scala"><code>val ches: Tuple2[String, Int] = ("Ches", 34)</code></pre>
+          <p>And its richer cousin, the <code>case class</code>:</p>
+          <pre class="scala"><code>case class Person(name: String, age: Int)
+// Actual type ends up being:
+// case class Person extends Product with Serializable
+
+Person.tupled(ches) // =&gt; Person = Person(Ches,34)</code></pre>
+        </section>
+        <section class="slide level2">
+          <p>These sums and products compose,<br>
+          that's the "algebra".</p>
+          <pre class="scala"><code>/* (Slightly simplified from the true Scala Option type) */
+sealed abstract class Option[A]
+case object None extends Option[Nothing]
+final case class Some[A](value: A) extends Option[A]</code></pre>
+        </section>
+        <section id="functions-as-objects" class="slide level2">
+          <h2>Functions as Objects</h2>
+          <pre class="scala"><code>package object logging {
+  type Tags = Map[String, String]
+}
+
+package logging {
+
+  /** Tags associated with a logged metric. */
+  object Tags {
+    def apply(elems: (String, String)*): Tags = Map(elems: _*)
+
+    def empty: Tags = Map.empty
+  }
+}</code></pre>
+          <aside class="notes">
+            <p>TODO: this is not the best example of what the slide title says, which should probably show functions as <code>FunctionN</code> traits, maybe <code>PartialFunction</code>, etc.</p>
+            <p>This was instead a code sample I happened to paste from real work code to test syntax highlighting, and kept it as an example of type aliases and package objects when running short on time :-)</p>
+          </aside>
+        </section>
+        <section id="practical-macros-logging" class="slide level2">
+          <h2>Practical Macros: Logging</h2>
+          <pre class="scala"><code>logger.debug(s"Some $expensive message!")</code></pre>
+          <p>becomes:</p>
+          <pre class="scala"><code>if (logger.isDebugEnabled)
+  logger.debug(s"Some $expensive message!")</code></pre>
+          <p><br>
+          <small><a href="https://github.com/typesafehub/scala-logging" class="uri">https://github.com/typesafehub/scala-logging</a></small></p>
+          <aside class="notes">
+            <p>I promised an example of compile-time metaprogramming that isn't mind-melting voodoo.</p>
+          </aside>
+        </section>
+        <section id="the-typeclass-pattern" class="slide level2">
+          <h2>The Typeclass Pattern</h2>
+          <ul>
+            <li class="fragment">Ad hoc polymorphism (what?)</li>
+            <li class="fragment">This is a deep talk, maybe another Meetup <i class="fa fa-smile-o" aria-hidden="true"></i></li>
+            <li class="fragment">Familiar with typeclasses?<br>
+            (You probably learned Haskell).<br>
+            You may want to look at Cats & scalaz.</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section id="resources" class="titleslide slide level1">
+          <h1>Resources</h1>
+        </section>
+        <section id="warming-up" class="slide level2">
+          <h2>Warming Up <i class="fa fa-fire" aria-hidden="true"></i></h2>
+          <p style="text-align: left;"><cite><a href="https://www.artima.com/shop/programming_in_scala_3ed"><em>Programming in Scala, 3rd ed.</em></a> –<br>
+          Odersky, Spoon, Venners</cite> ("the Stairway Book")</p>
+          <p style="text-align: left;"><cite><a href="http://danielwestheide.com/scala/neophytes.html"><em>The Neophyte's Guide to Scala</em></a> – Daniel Westheide</cite></p>
+          <p style="text-align: left;"><cite><a href="http://ktoso.github.io/scala-types-of-types/"><em>Scala's Types of Types</em></a> – Konrad Malawski</cite></p>
+          <p style="text-align: left;">Find Li Haoyi's trove like <cite><a href="http://www.lihaoyi.com/hands-on-scala-js/"><em>Hands-on Scala.js</em></a></cite></p>
+        </section>
+        <section id="getting-serious" class="slide level2">
+          <h2>Getting Serious <i class="fa fa-book" aria-hidden="true"></i></h2>
+          <p><a href="https://www.coursera.org/specializations/scala">EPFL Scala specialization on Coursera</a></p>
+        </section>
+        <section id="finding-libraries" class="slide level2">
+          <h2>Finding Libraries <i class="fa fa-code-fork" aria-hidden="true"></i></h2>
+          <p><a href="https://index.scala-lang.org/">Scala Library Index</a></p>
+        </section>
+        <section id="hardcore-fp" class="slide level2">
+          <h2>Hardcore FP <i class="fa fa-graduation-cap" aria-hidden="true"></i></h2>
+          <p style="text-align: left;"><cite><a href="https://www.manning.com/books/functional-programming-in-scala"><em>Functional Programming in Scala</em></a> –<br>
+          Chiusano, Bjarnason</cite> ("the Red Book")</p>
+          <p style="text-align: left;"><cite><a href="http://typelevel.org/blog/">Typelevel Blog</a></cite></p>
+          <p style="text-align: left;"><cite><a href="https://www.scala-exercises.org/">scala-exercises.org</a></cite></p>
+          <p style="text-align: left;"><cite><a href="http://eed3si9n.com/herding-cats/">herding cats</a> – Eugene Yokota</cite></p>
+        </section>
+      </section>
+      <section>
+        <section id="workshop-time" class="titleslide slide level1">
+          <h1>Workshop Time</h1>
+        </section>
+        <section id="repl-workout" class="slide level2">
+          <h2>REPL Workout!</h2>
+          <p><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i></span></p>
+          <ul>
+            <li>Please ask questions. Please.</li>
+            <li>Try stuff!</li>
+            <li>Remind me about sbt.</li>
+            <li>I could go on for awhile, leave if you gotta.</li>
+          </ul>
+          <aside class="notes">
+            <p>Show <code>:help</code>, <code>:load</code>, <code>:type</code>, <code>:javap -sysinfo</code> for a case class</p>
+          </aside>
+        </section>
+      </section>
+    </div>
+  </div>
+  <script src="reveal.js/lib/js/head.min.js"></script> 
+  <script src="reveal.js/js/reveal.js"></script> 
+  <script>
+
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+  </script>
+</body>
+</html>
