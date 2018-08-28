@@ -121,7 +121,7 @@ Concurrency & Streams
   - Actors
   - Rx, Reactive Streams
   - Monix, FS2 née scalaz Streams, FRP
-  - In the large: Spark
+  - In the large: Spark, Flink
 
 <div class="notes">
 Akka (but don't be too easily seduced—Actors sacrifice type safety and
@@ -187,8 +187,8 @@ Noisier in Scala:
 
 ```scala
 sealed trait Bool
-final case object False extends Bool
-final case object True extends Bool
+case object False extends Bool
+case object True extends Bool
 ```
 
 Product Types
@@ -197,7 +197,7 @@ Product Types
 The venerable `Tuple`:
 
 ```scala
-val ches: Tuple2[String, Int] = ("Ches", 34)
+val ches: Tuple2[String, Int] = ("Ches", 35)
 ```
 
 And its richer cousin, the `case class`:
@@ -207,7 +207,7 @@ case class Person(name: String, age: Int)
 // Actual type ends up being:
 // case class Person extends Product with Serializable
 
-Person.tupled(ches) // => Person = Person(Ches,34)
+Person.tupled(ches) // => Person = Person(Ches,35)
 ```
 
 -----

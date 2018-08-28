@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="generator" content="HTML Tidy for HTML5 for Mac OS X version 5.4.0">
+  <meta name="generator" content="HTML Tidy for HTML5 for Apple macOS version 5.6.0">
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Bangkok Functional Programmers">
@@ -44,7 +44,7 @@
         <p><i class="fa fa-meetup fa-lg fa-fw" aria-hidden="true"></i> <a href="https://www.meetup.com/bkkhack/">meetup.com/bkkhack</a></p>
       </section>
       <section>
-        <section id="why-scala" class="titleslide slide level1">
+        <section id="why-scala" class="title-slide slide level1">
           <h1>Why Scala?</h1>
         </section>
         <section id="multi-paradigm" class="slide level2">
@@ -54,9 +54,9 @@
             <li class="fragment">A Trojan Horse for FP into your company</li>
           </ul>
           <aside class="notes">
-            <p>"Scalable Language", OOP + functional, functions are objects!</p>
-            <p>This does bring a learning curve. But IMO Scala gets a bad rap as a "big" language, actually many "language features" are library features, not syntax. For example, Map <code>-&gt;</code> syntax.</p>
-            <p>FP as "programming in the small", modules and OOP "programming in the large"</p>
+            <p>“Scalable Language”, OOP + functional, functions are objects!</p>
+            <p>This does bring a learning curve. But IMO Scala gets a bad rap as a “big” language, actually many “language features” are library features, not syntax. For example, Map <code>-&gt;</code> syntax.</p>
+            <p>FP as “programming in the small”, modules and OOP “programming in the large”</p>
           </aside>
         </section>
         <section id="long-live-the-jvm" class="slide level2">
@@ -74,12 +74,12 @@
           </ul>
           <aside class="notes">
             <p>Say what you will about Java showing its age, but the JVM remains one of the top runtime platforms for good reasons, and continues to develop in support of new hosted languages.</p>
-            <p>Obviously widely deployed in enterprise, where it's well-understood by IT.</p>
+            <p>Obviously widely deployed in enterprise, where it’s well-understood by IT.</p>
             <p>Java interop and useful libraries.</p>
           </aside>
         </section>
         <section id="but" class="slide level2">
-          <h2>...But</h2>
+          <h2>…But</h2>
           <ul>
             <li class="fragment">
               <a href="https://www.scala-js.org/">Scala.js</a> is production-ready.
@@ -121,13 +121,13 @@
         <section id="martin" class="slide level2">
           <h2>❤️ Martin</h2>
           <figure>
-            <img src="assets/martin.jpg" alt="Prof. Odersky man crush" style="width:60.0%">
+            <img data-src="assets/martin.jpg" alt="Prof.&nbsp;Odersky man crush" style="width:60.0%">
             <figcaption>
-              <em>Prof. Odersky man crush</em>
+              <em>Prof.&nbsp;Odersky man crush</em>
             </figcaption>
           </figure>
           <aside class="notes">
-            <p>A language community is blessed to have someone with Martin's rare blend of brilliant creator + warmth and gifted passion for teaching.</p>
+            <p>A language community is blessed to have someone with Martin’s rare blend of brilliant creator + warmth and gifted passion for teaching.</p>
             <p>Founder and chairman of Typesafe née Lightbend, professor at Ecole Polytechnique Fédérale de Lausanne (EPFL) in Switzerland.</p>
             <p>Wrote javac compiler v2 released in 1999, still the basis of javac today, plus the precursor of Java 5 generics.</p>
           </aside>
@@ -135,17 +135,17 @@
         <section id="concurrency-streams" class="slide level2">
           <h2>Concurrency & Streams</h2>
           <ul>
-            <li>Modern abstractions built on JVM's<br>
+            <li>Modern abstractions built on JVM’s<br>
             proven primitives</li>
             <li>Futures, parallel collections</li>
             <li>Actors</li>
             <li>Rx, Reactive Streams</li>
             <li>Monix, FS2 née scalaz Streams, FRP</li>
-            <li>In the large: Spark</li>
+            <li>In the large: Spark, Flink</li>
           </ul>
           <aside class="notes">
-            <p>Akka (but don't be too easily seduced—Actors sacrifice type safety and functional benefits in a tradeoff that isn't worth it unless building a system with actual distributed state)</p>
-            <p>FRP - Functional Reactive Programming, see e.g. Elm language and one-way data flow like Redux (someone should give a meetup talk about either of these!)</p>
+            <p>Akka (but don’t be too easily seduced—Actors sacrifice type safety and functional benefits in a tradeoff that isn’t worth it unless building a system with actual distributed state)</p>
+            <p>FRP - Functional Reactive Programming, see e.g.&nbsp;Elm language and one-way data flow like Redux (someone should give a meetup talk about either of these!)</p>
           </aside>
         </section>
         <section id="progressive-research" class="slide level2">
@@ -159,12 +159,12 @@
           </ul>
           <aside class="notes">
             <p>scala-logging is a very practical example for macros.</p>
-            <p>Yeah yeah Clojure devs, we're not homoiconic, but you're dynamically-typed :-P</p>
+            <p>Yeah yeah Clojure devs, we’re not homoiconic, but you’re dynamically-typed :-P</p>
           </aside>
         </section>
       </section>
       <section>
-        <section id="the-gateway-drug" class="titleslide slide level1">
+        <section id="the-gateway-drug" class="title-slide slide level1">
           <h1>The Gateway Drug</h1>
         </section>
         <section id="lead-a-horse-to-water" class="slide level2">
@@ -176,12 +176,12 @@
             <li>Algebraic Data Types (sit tight)</li>
           </ul>
           <aside class="notes">
-            <p><code>Option</code> type becoming more familiar: Swift, Rust, OCaml, Haskell's <code>Maybe</code></p>
+            <p><code>Option</code> type becoming more familiar: Swift, Rust, OCaml, Haskell’s <code>Maybe</code></p>
           </aside>
         </section>
         <section class="slide level2">
           <figure>
-            <img src="assets/godfather-runtime.jpg" alt="Turing-complete type system‽">
+            <img data-src="assets/godfather-runtime.jpg" alt="Turing-complete type system‽">
             <figcaption>
               Turing-complete type system‽
             </figcaption>
@@ -200,23 +200,23 @@
           <pre class="haskell"><code>data Bool = False | True</code></pre>
           <p>Noisier in Scala:</p>
           <pre class="scala"><code>sealed trait Bool
-final case object False extends Bool
-final case object True extends Bool</code></pre>
+case object False extends Bool
+case object True extends Bool</code></pre>
         </section>
         <section id="product-types" class="slide level2">
           <h2>Product Types</h2>
           <p>The venerable <code>Tuple</code>:</p>
-          <pre class="scala"><code>val ches: Tuple2[String, Int] = ("Ches", 34)</code></pre>
+          <pre class="scala"><code>val ches: Tuple2[String, Int] = ("Ches", 35)</code></pre>
           <p>And its richer cousin, the <code>case class</code>:</p>
           <pre class="scala"><code>case class Person(name: String, age: Int)
 // Actual type ends up being:
 // case class Person extends Product with Serializable
 
-Person.tupled(ches) // =&gt; Person = Person(Ches,34)</code></pre>
+Person.tupled(ches) // =&gt; Person = Person(Ches,35)</code></pre>
         </section>
         <section class="slide level2">
           <p>These sums and products compose,<br>
-          that's the "algebra".</p>
+          that’s the “algebra”.</p>
           <pre class="scala"><code>/* (Slightly simplified from the true Scala Option type) */
 sealed abstract class Option[A]
 case object None extends Option[Nothing]
@@ -251,7 +251,7 @@ package logging {
           <p><br>
           <small><a href="https://github.com/typesafehub/scala-logging" class="uri">https://github.com/typesafehub/scala-logging</a></small></p>
           <aside class="notes">
-            <p>I promised an example of compile-time metaprogramming that isn't mind-melting voodoo.</p>
+            <p>I promised an example of compile-time metaprogramming that isn’t mind-melting voodoo.</p>
           </aside>
         </section>
         <section id="the-typeclass-pattern" class="slide level2">
@@ -266,16 +266,16 @@ package logging {
         </section>
       </section>
       <section>
-        <section id="resources" class="titleslide slide level1">
+        <section id="resources" class="title-slide slide level1">
           <h1>Resources</h1>
         </section>
         <section id="warming-up" class="slide level2">
           <h2>Warming Up <i class="fa fa-fire" aria-hidden="true"></i></h2>
           <p style="text-align: left;"><cite><a href="https://www.artima.com/shop/programming_in_scala_3ed"><em>Programming in Scala, 3rd ed.</em></a> –<br>
-          Odersky, Spoon, Venners</cite> ("the Stairway Book")</p>
-          <p style="text-align: left;"><cite><a href="http://danielwestheide.com/scala/neophytes.html"><em>The Neophyte's Guide to Scala</em></a> – Daniel Westheide</cite></p>
-          <p style="text-align: left;"><cite><a href="http://ktoso.github.io/scala-types-of-types/"><em>Scala's Types of Types</em></a> – Konrad Malawski</cite></p>
-          <p style="text-align: left;">Find Li Haoyi's trove like <cite><a href="http://www.lihaoyi.com/hands-on-scala-js/"><em>Hands-on Scala.js</em></a></cite></p>
+          Odersky, Spoon, Venners</cite> (“the Stairway Book”)</p>
+          <p style="text-align: left;"><cite><a href="http://danielwestheide.com/scala/neophytes.html"><em>The Neophyte’s Guide to Scala</em></a> – Daniel Westheide</cite></p>
+          <p style="text-align: left;"><cite><a href="http://ktoso.github.io/scala-types-of-types/"><em>Scala’s Types of Types</em></a> – Konrad Malawski</cite></p>
+          <p style="text-align: left;">Find Li Haoyi’s trove like <cite><a href="http://www.lihaoyi.com/hands-on-scala-js/"><em>Hands-on Scala.js</em></a></cite></p>
         </section>
         <section id="getting-serious" class="slide level2">
           <h2>Getting Serious <i class="fa fa-book" aria-hidden="true"></i></h2>
@@ -288,14 +288,14 @@ package logging {
         <section id="hardcore-fp" class="slide level2">
           <h2>Hardcore FP <i class="fa fa-graduation-cap" aria-hidden="true"></i></h2>
           <p style="text-align: left;"><cite><a href="https://www.manning.com/books/functional-programming-in-scala"><em>Functional Programming in Scala</em></a> –<br>
-          Chiusano, Bjarnason</cite> ("the Red Book")</p>
+          Chiusano, Bjarnason</cite> (“the Red Book”)</p>
           <p style="text-align: left;"><cite><a href="http://typelevel.org/blog/">Typelevel Blog</a></cite></p>
           <p style="text-align: left;"><cite><a href="https://www.scala-exercises.org/">scala-exercises.org</a></cite></p>
           <p style="text-align: left;"><cite><a href="http://eed3si9n.com/herding-cats/">herding cats</a> – Eugene Yokota</cite></p>
         </section>
       </section>
       <section>
-        <section id="workshop-time" class="titleslide slide level1">
+        <section id="workshop-time" class="title-slide slide level1">
           <h1>Workshop Time</h1>
         </section>
         <section id="repl-workout" class="slide level2">
