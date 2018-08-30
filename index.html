@@ -11,7 +11,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style type="text/css">
-  code{white-space: pre;}
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
   <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme"><!-- For syntax highlighting using highlight.js -->
   <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
@@ -30,7 +33,7 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section>
+      <section id="title-slide">
         <h1 class="title">Intro to<br>
         Learning Scala</h1>
         <p class="author"><em>Bangkok Functional Programmers</em></p>
@@ -322,13 +325,15 @@ package logging {
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
           { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
   </script>
